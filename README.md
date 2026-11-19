@@ -14,6 +14,8 @@
 
 > 使用 `$room-reconstruction-pipeline` 分析 `input/living-room/` 的照片，列出墙、门窗和稳定大件，记录每张图的相对位置以及材质证据。先给我候选户型、尺寸依据和待确认项，确认后生成可编辑的 Blender 工程和室内预览。
 
+把真实房源的下载清单、报告和渲染留在 `work/` 或 `output/`。图片下载清单会记录原始 URL，可能包含临时签名。提交示例前请检查链接、图片元数据和模型内打包的引用素材。忽略规则只影响未跟踪的文件。
+
 要单独委派时，可以在提示里指定「请让 `room_reconstruction` Agent 处理这个房间」，其职责在 [项目 Agent 配置](.codex/agents/room-reconstruction.toml) 中定义。各 skill 的 `agents/openai.yaml` 用于展示名称和缺省调用提示。两类文件的用途分别见 [Codex Agent 文档](https://learn.chatgpt.com/docs/agent-configuration/subagents)和 [Skills 文档](https://learn.chatgpt.com/docs/build-skills)。
 
 ## 工作流程
@@ -88,3 +90,7 @@ python3 "$pipeline/test_blender_pipeline.py" --blender "$(command -v blender)" \
 **照片能直接得到完整尺寸和 3D 吗？** 需要 Codex 或建模人员解析证据、确认布局并选择建模方式。照片可以给出相对位置和外观线索；精确尺寸需要实测或有尺度依据的扫描。
 
 **程序生成的结果为什么和照片有差别？** 遮挡、相机畸变、曝光和照明都会影响判断。先对齐机位和几何，再对照地面、柜体、织物的色相、纹理方向和反光。脚本检验数据或几何约束，视觉验收还需要逐图对照。
+
+## 许可证
+
+仓库代码、Skill、Agent 配置和配套文字文档采用 [MIT 许可证](LICENSE)。`docs/images/` 内的合成示例图仅用于项目展示，不在本许可证授权范围内。图片来源见[示例说明](docs/example.md)。

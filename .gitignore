@@ -2,10 +2,40 @@
 __pycache__/
 *.py[cod]
 .venv/
-/work/
-/output/
-/input/
+
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+
+# Private inputs and working directories at any depth
+input/
+work/
+output/
+photos/
+keyframes/
+scans/
+depth/
+/assets/rooms/
+
+# Source URLs and generated inventories may contain private evidence
+sources.txt
+images-manifest.json
+contact-sheet*.jpg
+objects.json
+image-spatial-relations.json
+furniture-distances.json
+layout-candidate.json
+material-observations.json
+material-spec.json
+material-validation.json
+
+# Local models, recordings and scan exports
 *.blend
 *.blend[0-9]*
 *.glb
+*.gltf
 *.npz
+*.ply
+*.mp4
+*.mov
