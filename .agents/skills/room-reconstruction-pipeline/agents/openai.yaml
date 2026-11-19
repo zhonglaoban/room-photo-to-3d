@@ -1,0 +1,6 @@
+interface:
+  display_name: "室内重建与渲染流水线"
+  short_description: "把照片、扫描和确认布局接入可复用的建模同步、实际几何校验与整体渲染流程"
+  default_prompt: "使用 $room-reconstruction-pipeline 处理这个房间，复用已有证据并完成布局应用、模型同步和实际几何校验。"
+policy:
+  allow_implicit_invocation: true

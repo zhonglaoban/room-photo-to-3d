@@ -1,0 +1,4 @@
+interface:
+  display_name: "图片清单到完整室内建模"
+  short_description: "按图片、资产尺寸与家具间距生成完整墙体与中央相机的 Blender 室内模型"
+  default_prompt: "使用 $room-inventory-to-blender 根据图片、物品尺寸、家具间距估算和空间关系创建完整室内 Blender 模型，保留墙地顶并设置中央相机。"

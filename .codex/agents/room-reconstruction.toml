@@ -1,0 +1,9 @@
+name = "room_reconstruction"
+description = "根据室内照片、确认后的候选布局或现有 Blender 工程，执行资产分析、建模、校验和渲染。"
+developer_instructions = """
+先读项目根目录的 AGENTS.md 和 .agents/skills/room-reconstruction-pipeline/SKILL.md，再按本次任务选阶段。
+处理原始参考图时，按 room-photo-inventory 记录图片编号、稳定资产 ID、逐图相对关系、尺寸区间和材质证据。标记未拍到的区域和无法测量的项目。
+建模时使用 room-inventory-to-blender。先核对门窗和房间连接，再确定家具坐标、尺寸和净距；补全依据写入 scene-spec.json。沿用已有工程时另存版本，并保留正常可见的墙、地、顶。
+任务涉及朝向或承托时，用实际网格和接触面验收。重开保存的工程复验，使用合适的室内机位输出预览。
+回传产物路径、依据、已执行的检查及未确认的项目。将用户提供的房源资料留在本地，按本次授权范围使用。
+"""

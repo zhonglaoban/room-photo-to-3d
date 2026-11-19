@@ -1,0 +1,6 @@
+interface:
+  display_name: "室内照片资产分析"
+  short_description: "从室内照片整理物品、材质与空间关系，并检查建模清单"
+  default_prompt: "使用 $room-photo-inventory 分析这些室内照片，输出带照片证据的资产清单、空间关系和材质约束，把未知尺寸或连接明确标记。"
+policy:
+  allow_implicit_invocation: true
